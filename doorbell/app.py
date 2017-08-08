@@ -2,8 +2,11 @@ import RPi.GPIO as GPIO
 import time
 import requests
 import yaml
+import os
+import sys
 
-config = yaml.safe_load(open("config.yml"))
+configFile = os.path.join(sys.path[0], 'config.yml')
+config = yaml.safe_load(open(configFile))
 
 GPIO.setmode(GPIO.BOARD)
 
