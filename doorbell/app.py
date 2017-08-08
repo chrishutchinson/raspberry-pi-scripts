@@ -16,7 +16,7 @@ GPIO.setup(ledPin, GPIO.OUT)
 GPIO.output(ledPin, GPIO.LOW)
 
 # Request details
-url = config.makerUrl
+url = config['makerUrl']
 
 print "Listening for doorbell presses..."
 try:
