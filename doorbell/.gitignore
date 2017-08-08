@@ -1,0 +1,5 @@
+# App specific
+config.yml
+
+# macOS
+.DS_Store
