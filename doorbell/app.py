@@ -5,6 +5,8 @@ import yaml
 import os
 import sys
 
+# Hello, this a comment
+
 configFile = os.path.join(sys.path[0], 'config.yml')
 config = yaml.safe_load(open(configFile))
 
