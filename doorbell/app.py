@@ -12,8 +12,8 @@ config = yaml.safe_load(open(configFile))
 
 GPIO.setmode(GPIO.BOARD)
 
-buttonPin = 11
-ledPin = 16
+buttonPin = config['buttonPin']
+ledPin = config['ledPin']
 
 GPIO.setup(buttonPin, GPIO.IN)
 GPIO.setup(ledPin, GPIO.OUT)
@@ -31,6 +31,7 @@ try:
     else:
       GPIO.output(ledPin, GPIO.HIGH)
       requests.post(url)
+      time.sleep(5)
       print "On"
 
     time.sleep(0.1)
